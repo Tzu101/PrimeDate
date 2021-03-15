@@ -181,7 +181,7 @@ public class PrimeDate {
 
         for(int year = startDate.year; year <= endDate.year; year++) {
 
-            int leapYear = (year % 4 == 0) ? 1 : 0;
+            int leapYear = (year % 4 == 0 && (year % 100 == 0 && year % 400 == 0)) ? 1 : 0;
 
             int monthStart = (year == startDate.year) ? startDate.month : 1;
             int monthEnd = (year == endDate.year) ? endDate.month : 12;
